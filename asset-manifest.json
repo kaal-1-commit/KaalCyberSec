@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/kaalcybersec/static/css/main.c50dd121.css",
+    "main.js": "/kaalcybersec/static/js/main.93094cd5.js",
+    "static/js/453.456e7b2d.chunk.js": "/kaalcybersec/static/js/453.456e7b2d.chunk.js",
+    "static/media/KCS.jpg": "/kaalcybersec/static/media/KCS.b6ce0e5bd90dd83cfa5a.jpg",
+    "index.html": "/kaalcybersec/index.html",
+    "main.c50dd121.css.map": "/kaalcybersec/static/css/main.c50dd121.css.map",
+    "main.93094cd5.js.map": "/kaalcybersec/static/js/main.93094cd5.js.map",
+    "453.456e7b2d.chunk.js.map": "/kaalcybersec/static/js/453.456e7b2d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c50dd121.css",
+    "static/js/main.93094cd5.js"
+  ]
+}
