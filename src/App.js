@@ -8,6 +8,10 @@ import Testimonials from './components/Testimonial';
 import TechStack from './components/Technology';
 import CaseStudies from './components/Case';
 import Caareer from './components/Career';
+import Footer from './components/Footer';
+import Bundles from "./components/Bundles";
+
+
 
 const App = () => {
   return (
@@ -16,13 +20,17 @@ const App = () => {
 
   
     <Landingpage/>
-    <About/>
+   
     <Service/>
+    <Bundles />
+     <About/>
+
     <TechStack/>
      <Testimonials/>
     <CaseStudies/>
     <Caareer/>
     <Contact/>
+    <Footer/>
    
     
     </div>

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Mail, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -10,19 +10,18 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_jp88iik",     // ⚡ Service ID
-        "template_y85jubb",    // ⚡ Template ID
+        "service_jp88iik",
+        "template_y85jubb",
         form.current,
-        "YogqWmen2ZNaf_oBO"    // ⚡ Public Key (User ID)
+        "YogqWmen2ZNaf_oBO"
       )
       .then(
-        (result) => {
-          alert("✅ Message Sent Successfully!");
-          console.log(result.text);
+        () => {
+          alert("✅ Thank you! Our team will contact you shortly.");
+          form.current.reset();
         },
-        (error) => {
-          alert("❌ Failed to send. Try again later.");
-          console.error(error.text);
+        () => {
+          alert("❌ Failed to send. Please try again later.");
         }
       );
   };
@@ -37,34 +36,54 @@ export default function Contact() {
         fontFamily: "'Camomile', sans-serif",
       }}
     >
+      {/* Section Heading */}
       <h2
-        className="text-center fw-bold mb-5 border-bottom border-success pb-4"
+        className="text-center fw-bold mb-3 border-bottom border-success pb-3"
         data-aos="fade-down"
       >
-        Contact Us
+        Contact KaalCyberSec
       </h2>
+
+      {/* SEO-supportive subheading */}
+      <p className="text-center text-secondary mb-5">
+        Discuss your cybersecurity, development, or enterprise technology
+        requirements with our experts.
+      </p>
 
       <div className="row justify-content-center">
         <div className="col-lg-8">
-          <form ref={form} onSubmit={sendEmail} className="row g-4" data-aos="fade-up">
+
+          {/* Trust line */}
+          <div className="text-center mb-4 small text-muted">
+            Govt. Registered Entity (UDYAM-MP-23-0233844) • Secure Communication • NDA-First Approach
+          </div>
+
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="row g-4"
+            data-aos="fade-up"
+          >
             <div className="col-md-6">
               <input
                 type="text"
                 name="user_name"
-                placeholder="Your Name"
+                placeholder="Full Name"
                 className="form-control"
                 required
               />
             </div>
+
             <div className="col-md-6">
               <input
                 type="email"
                 name="user_email"
-                placeholder="Email Address"
+                placeholder="Business Email Address"
                 className="form-control"
                 required
               />
             </div>
+
             <div className="col-md-6">
               <input
                 type="text"
@@ -73,43 +92,42 @@ export default function Contact() {
                 className="form-control"
               />
             </div>
+
             <div className="col-md-6">
               <input
                 type="tel"
                 name="phone"
-                placeholder="Phone Number"
+                placeholder="Contact Number (Optional)"
                 className="form-control"
               />
             </div>
+
+            {/* CTA-aligned message */}
             <div className="col-12">
               <textarea
                 rows={5}
                 name="message"
-                placeholder="Your Message"
+                placeholder="Briefly describe your requirement (e.g., Cybersecurity audit, Full-stack development, Enterprise bundle)"
                 className="form-control"
                 required
               ></textarea>
             </div>
+
             <div className="col-12 text-center">
               <button type="submit" className="futuristic-btn mt-3">
-                <Mail className="me-2" /> Send Message
+                <Mail className="me-2" />
+                Request Consultation
               </button>
             </div>
           </form>
-        </div>
-      </div>
 
-      <div className="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
-        <p className="mb-2 d-flex align-items-center justify-content-center gap-2">
-          <MapPin size={18} className="text-info" /> Indore, Madhya Pradesh (HQ)
-        </p>
-        <p className="mb-2 d-flex align-items-center justify-content-center gap-2">
-          <Mail size={18} className="text-info" /> kaalcybersec@gmail.com
-        </p>
-        <p className="opacity-75 small mt-3 border-bottom border-success pb-4">
-          We respond within 24 hours. For urgent security incidents, mark your message as <b>High Priority</b>.
-        </p>
+          {/* CTA reassurance */}
+          <p className="text-center text-secondary small mt-4">
+            We respond within 24 working hours. Your information is kept confidential.
+          </p>
+        </div>
       </div>
     </section>
   );
 }
+
