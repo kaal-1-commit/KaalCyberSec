@@ -1,85 +1,369 @@
 import React, { Component } from "react";
-import { Cpu, Lock, Code, Database, Network } from "lucide-react"; // npm i lucide-react
+
+import {
+  Cpu,
+  ShieldCheck,
+  Code2,
+  Database,
+  Network,
+  ArrowUpRight,
+} from "lucide-react";
 
 export default class TechStack extends Component {
+
   render() {
+
+    const technologies = [
+      {
+        icon: <Cpu size={52} />,
+        title: "Offensive Security",
+        desc: "Advanced penetration testing, exploit validation, vulnerability research, and offensive security operations using industry-standard tooling.",
+        tech: "Kali Linux • Burp Suite • Metasploit • Wireshark",
+      },
+
+      {
+        icon: <ShieldCheck size={52} />,
+        title: "Defensive Security",
+        desc: "Enterprise defense operations focused on monitoring, threat detection, SIEM integrations, and infrastructure hardening.",
+        tech: "SIEM • IDS/IPS • SOC Monitoring • Threat Intel",
+      },
+
+      {
+        icon: <Code2 size={52} />,
+        title: "Secure Development",
+        desc: "Scalable secure software engineering for modern web applications, APIs, and enterprise systems with security-first architecture.",
+        tech: "React • Django • FastAPI • Node.js",
+      },
+
+      {
+        icon: <Database size={52} />,
+        title: "Data Infrastructure",
+        desc: "High-performance database systems engineered for scalability, resilience, optimization, and enterprise-grade reliability.",
+        tech: "PostgreSQL • MongoDB • MySQL • Redis",
+      },
+
+      {
+        icon: <Network size={52} />,
+        title: "Cloud & DevSecOps",
+        desc: "Cloud-native infrastructure, secure deployment pipelines, containerization, CI/CD security, and production hardening.",
+        tech: "AWS • Docker • Kubernetes • CI/CD",
+      },
+    ];
+
     return (
       <section
         id="tech-stack"
-        className="container-fluid py-5"
+        className="container-fluid py-5 position-relative overflow-hidden"
         style={{
-          backgroundColor: "#0a0a0a",
           color: "#fff",
-          fontFamily: "'camomile', sans-serif",
+          fontFamily: "'Camomile', sans-serif",
         }}
       >
+
+        {/* STYLES */}
         <style>{`
+
           @import url('https://fonts.cdnfonts.com/css/camomile');
+
+          .stack-heading {
+
+            font-size: 3rem;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            color: #fff;
+
+            text-shadow: 0 0 18px rgba(0,255,120,0.18);
+          }
+
+          .stack-subtext {
+
+            max-width: 780px;
+
+            margin: auto;
+
+            color: rgba(255,255,255,0.92);
+
+            line-height: 1.9;
+
+            font-size: 1.02rem;
+          }
+
           .stack-card {
-            background: rgba(0, 0, 0, 0.83);
-            border: 1px solid rgba(0, 255, 55, 1);
-            box-shadow: 0px 0px 15px rgba(0, 255, 55, 1);
-            border-radius: 10px;
-            padding: 20px;
-            transition: all 0.4s ease;
+
+            position: relative;
+
+            height: 100%;
+
+            padding: 40px 30px;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            background: rgba(255,255,255,0.03);
+
+            border: 1px solid rgba(0,255,120,0.14);
+
+            backdrop-filter: blur(18px);
+
+            transition: 0.45s ease;
+
+            box-shadow:
+              0 0 25px rgba(0,255,120,0.05),
+              inset 0 0 18px rgba(255,255,255,0.02);
           }
+
+          .stack-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: linear-gradient(
+              135deg,
+              rgba(0,255,120,0.08),
+              transparent 45%
+            );
+
+            opacity: 0;
+
+            transition: 0.4s ease;
+          }
+
           .stack-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 0px 25px rgba(0, 255, 55, 1);
+
+            transform: translateY(-10px);
+
+            border-color: rgba(0,255,120,0.5);
+
+            box-shadow:
+              0 0 35px rgba(0,255,120,0.18),
+              0 0 60px rgba(0,255,120,0.08);
           }
+
+          .stack-card:hover::before {
+            opacity: 1;
+          }
+
+          .stack-icon {
+
+            width: 95px;
+            height: 95px;
+
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: #00ff88;
+
+            background: rgba(0,255,120,0.08);
+
+            border: 1px solid rgba(0,255,120,0.16);
+
+            margin-bottom: 24px;
+
+            transition: 0.4s ease;
+
+            box-shadow: 0 0 25px rgba(0,255,120,0.08);
+          }
+
+          .stack-card:hover .stack-icon {
+
+            transform: scale(1.08) rotate(4deg);
+
+            background: rgba(0,255,120,0.15);
+
+            box-shadow:
+              0 0 25px rgba(0,255,120,0.3),
+              0 0 50px rgba(0,255,120,0.15);
+          }
+
+          .stack-title {
+
+            font-size: 1.4rem;
+
+            font-weight: 700;
+
+            color: #fff;
+
+            margin-bottom: 18px;
+
+            transition: 0.3s ease;
+          }
+
+          .stack-card:hover .stack-title {
+            color: #00ff88;
+          }
+
+          .stack-description {
+
+            color: rgba(255,255,255,0.94);
+
+            line-height: 1.95;
+
+            font-size: 1rem;
+
+            margin-bottom: 18px;
+          }
+
+          .stack-tech {
+
+            color: #00ff88;
+
+            font-size: 0.95rem;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 28px;
+
+            line-height: 1.8;
+          }
+
+          .stack-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: #fff;
+
+            font-size: 0.92rem;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s ease;
+          }
+
+          .stack-card:hover .stack-link {
+            color: #00ff88;
+          }
+
+          .stack-link svg {
+            transition: 0.3s ease;
+          }
+
+          .stack-card:hover .stack-link svg {
+            transform: translate(4px,-4px);
+          }
+
+          .stack-glow {
+
+            position: absolute;
+
+            width: 550px;
+            height: 550px;
+
+            background: rgba(0,255,120,0.05);
+
+            border-radius: 50%;
+
+            filter: blur(130px);
+
+            bottom: -220px;
+            right: -180px;
+
+            z-index: 0;
+          }
+
+          @media(max-width:768px){
+
+            .stack-heading{
+              font-size: 2.2rem;
+            }
+
+            .stack-card{
+              padding: 34px 24px;
+            }
+          }
+
         `}</style>
 
-        <h2
-          className="text-center fw-bold mb-5 border-5 border-bottom border-success pb-4"
-          data-aos="fade-down"
-          style={{
-            textShadow: "0px 0px 12px rgba(0, 255, 55, 1)",
-          }}
-        >
-          Technology Stack
-        </h2>
+        {/* BACKGROUND GLOW */}
+        <div className="stack-glow"></div>
 
-        <div className="row g-4 px-4 text-center ">
-          <div className="col-md-3" data-aos="zoom-in">
-            <div className="stack-card">
-              <Cpu size={40} className="text-info mb-2" />
-              <h6>Offensive Security</h6>
-              <p>Kali Linux • Burp Suite • Metasploit • Wireshark</p>
-            </div>
-          </div>
+        {/* HEADING */}
+        <div className="text-center mb-5 position-relative">
 
-          <div className="col-md-3" data-aos="zoom-in" data-aos-delay="200">
-            <div className="stack-card">
-              <Lock size={40} className="text-warning mb-2" />
-              <h6>Defensive Security</h6>
-              <p>SIEM • IDS/IPS • SOC Monitoring • Threat Intel</p>
-            </div>
-          </div>
+          <h2
+            className="stack-heading"
+            data-aos="zoom-in"
+          >
+            Technology Stack
+          </h2>
 
-          <div className="col-md-3" data-aos="zoom-in" data-aos-delay="400">
-            <div className="stack-card">
-              <Code size={40} className="text-success mb-2" />
-              <h6>Development</h6>
-              <p>React • Django • FastAPI • Node.js • Secure Coding</p>
-            </div>
-          </div>
+          <p
+            className="stack-subtext mt-4"
+            data-aos="fade-up"
+          >
+            Enterprise-grade technologies, offensive security tooling,
+            cloud-native infrastructure, and secure engineering frameworks
+            powering modern digital ecosystems.
+          </p>
 
-          <div className="col-md-3" data-aos="zoom-in" data-aos-delay="600">
-            <div className="stack-card">
-              <Database size={40} className="text-danger mb-2" />
-              <h6>Databases</h6>
-              <p>PostgreSQL • MongoDB • MySQL • Redis</p>
-            </div>
-          </div>
-
-          <div className="col-md-12 mt-4" data-aos="fade-up">
-            <div className="stack-card">
-              <Network size={40} className="text-primary mb-2" />
-              <h6>Cloud & DevSecOps</h6>
-              <p>AWS • Docker • Kubernetes • CI/CD Security • Cloud Hardening</p>
-            </div>
-          </div>
         </div>
+
+        {/* CARDS */}
+        <div className="row g-4 px-lg-5 px-3 position-relative">
+
+          {technologies.map((tech, index) => (
+
+            <div
+              className={`${
+                index === 4
+                  ? "col-12"
+                  : "col-md-6 col-xl-3"
+              }`}
+              key={index}
+            >
+
+              <div
+                className="stack-card text-center"
+                data-aos="fade-up"
+                data-aos-delay={index * 120}
+              >
+
+                <div className="stack-icon">
+                  {tech.icon}
+                </div>
+
+                <h4 className="stack-title">
+                  {tech.title}
+                </h4>
+
+                <p className="stack-description">
+                  {tech.desc}
+                </p>
+
+                <div className="stack-tech">
+                  {tech.tech}
+                </div>
+
+                <div className="stack-link">
+                  Explore Technologies
+                  <ArrowUpRight size={18} />
+                </div>
+
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
+
       </section>
     );
   }
