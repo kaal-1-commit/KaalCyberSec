@@ -9,7 +9,8 @@ import {
 
 import {  FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
- 
+
+
 
 export default class Footer extends Component {
 
@@ -371,15 +372,15 @@ export default class Footer extends Component {
             data-aos-delay="250"
           >
 
-            <a href="/privacy-policy">
+            <a href={`${process.env.PUBLIC_URL}/privacy-policy.pdf`}target="_blank" rel="noreferrer">
               Privacy Policy
             </a>
 
-            <a href="/terms-and-conditions">
+            <a  href={`${process.env.PUBLIC_URL}/terms-and-conditions.pdf`} target="_blank" rel="noreferrer">
               Terms & Conditions
             </a>
 
-            <a href="/refund-policy">
+            <a  href={`${process.env.PUBLIC_URL}/refund-policy.pdf`} target="_blank" rel="noreferrer">
               Refund Policy
             </a>
 

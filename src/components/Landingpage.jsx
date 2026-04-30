@@ -380,7 +380,11 @@ export default function KaalCyberSecLanding() {
                   Careers
                 </a>
               </li>
-
+               <li className="nav-item">
+                <a className="nav-link" href="#Blog">
+                  Blog
+                </a>
+              </li>
               <li className="nav-item">
                 <a className="nav-link" href="#contact">
                   Contact

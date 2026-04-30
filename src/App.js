@@ -14,7 +14,7 @@ import CaseStudies from './components/Case';
 import Caareer from './components/Career';
 import Footer from './components/Footer';
 import Bundles from "./components/Bundles";
-
+import Blog from './components/Blog';
 const App = () => {
 
   const [loading, setLoading] = useState(true);
@@ -76,7 +76,7 @@ const App = () => {
       <Service />
 
       <Bundles />
-
+     
       <About />
 
       <TechStack />
@@ -85,12 +85,12 @@ const App = () => {
 
       <CaseStudies />
 
-      <Caareer />
-
+        <Caareer />
+      <Blog />
       <Contact />
 
       <Footer />
-
+     
     </div>
   );
 }
