@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/KaalCyberSec/static/css/main.afe5148b.css",
-    "main.js": "/KaalCyberSec/static/js/main.d258db75.js",
+    "main.js": "/KaalCyberSec/static/js/main.dd725b5b.js",
     "static/js/453.456e7b2d.chunk.js": "/KaalCyberSec/static/js/453.456e7b2d.chunk.js",
     "index.html": "/KaalCyberSec/index.html",
     "main.afe5148b.css.map": "/KaalCyberSec/static/css/main.afe5148b.css.map",
-    "main.d258db75.js.map": "/KaalCyberSec/static/js/main.d258db75.js.map",
+    "main.dd725b5b.js.map": "/KaalCyberSec/static/js/main.dd725b5b.js.map",
     "453.456e7b2d.chunk.js.map": "/KaalCyberSec/static/js/453.456e7b2d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.afe5148b.css",
-    "static/js/main.d258db75.js"
+    "static/js/main.dd725b5b.js"
   ]
 }
