@@ -12,15 +12,17 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-
+import CyberScene from "./CyberScene";
 
 export default function KaalCyberSecLanding() {
 
   useEffect(() => {
+
     AOS.init({
       duration: 1000,
       once: true,
     });
+
   }, []);
 
   return (
@@ -29,17 +31,6 @@ export default function KaalCyberSecLanding() {
 
       <style>{`
 
-
-      
-
-
-
-
-
-
-
-
-
         @import url('https://fonts.cdnfonts.com/css/tesla');
 
         .font-tesla {
@@ -47,7 +38,7 @@ export default function KaalCyberSecLanding() {
         }
 
         body {
-          background: #000000;
+          background: #000;
           color: #fff;
           overflow-x: hidden;
         }
@@ -56,17 +47,15 @@ export default function KaalCyberSecLanding() {
 
         .navbar-custom {
 
-          background: rgba(0,0,0,0.72);
+          background: rgba(0,0,0,0.35);
 
-          backdrop-filter: blur(14px);
+          backdrop-filter: blur(12px);
 
           border-bottom: 1px solid rgba(0,255,120,0.14);
 
           padding: 14px 0;
 
-          transition: 0.4s ease;
-          box-shadow:
-            0 0 20px rgba(0,255,120,0.06);
+          z-index: 1000;
         }
 
         .brand-logo {
@@ -96,8 +85,6 @@ export default function KaalCyberSecLanding() {
           font-weight: 600;
 
           transition: 0.3s ease;
-
-          position: relative;
         }
 
         .navbar-custom .nav-link:hover {
@@ -125,22 +112,38 @@ export default function KaalCyberSecLanding() {
           overflow: hidden;
 
           text-align: center;
+
+          background: #000;
         }
 
-      
+        /* 3D CANVAS */
 
-        /* MATRIX OVERLAY */
+        canvas {
 
-        .matrix-overlay {
+          position: absolute;
+
+          inset: 0;
+
+          width: 100% !important;
+
+          height: 100% !important;
+
+          z-index: 0;
+        }
+
+        /* DARK OVERLAY */
+
+        .hero-overlay {
 
           position: absolute;
 
           inset: 0;
 
           background:
-            linear-gradient(
-              rgba(0, 0, 0, 0.79),
-              rgba(0, 0, 0, 0.64)
+            radial-gradient(
+              circle at center,
+              rgba(0,0,0,0.18),
+              rgba(0,0,0,0.78)
             );
 
           z-index: 1;
@@ -170,31 +173,13 @@ export default function KaalCyberSecLanding() {
           pointer-events: none;
         }
 
-        /* HERO GLOW */
-
-        .hero-glow {
-
-          position: absolute;
-
-          width: 700px;
-          height: 700px;
-
-          background: rgba(0,255,120,0.08);
-
-          border-radius: 50%;
-
-          filter: blur(130px);
-
-          z-index: 1;
-        }
-
         /* CONTENT */
 
         .hero-content {
 
           position: relative;
 
-          z-index: 5;
+          z-index: 10;
 
           max-width: 1000px;
 
@@ -337,56 +322,6 @@ export default function KaalCyberSecLanding() {
             0 0 45px rgba(0,255,120,0.08);
         }
 
-        /* FLOATING CODE */
-
-        .floating-code {
-
-          position: absolute;
-
-          color: rgba(0,255,120,0.08);
-
-          font-size: 1rem;
-
-          font-family: monospace;
-
-          animation: floatCode 14s linear infinite;
-
-          white-space: nowrap;
-
-          pointer-events: none;
-
-          z-index: 1;
-        }
-
-        .code-1 {
-          top: 12%;
-          left: -20%;
-          animation-delay: 0s;
-        }
-
-        .code-2 {
-          top: 30%;
-          right: -20%;
-          animation-delay: 4s;
-        }
-
-        .code-3 {
-          bottom: 18%;
-          left: -25%;
-          animation-delay: 8s;
-        }
-
-        @keyframes floatCode {
-
-          from {
-            transform: translateX(0px);
-          }
-
-          to {
-            transform: translateX(140vw);
-          }
-        }
-
         /* RESPONSIVE */
 
         @media(max-width:768px){
@@ -419,7 +354,7 @@ export default function KaalCyberSecLanding() {
 
           <a
             className="navbar-brand brand-logo"
-            href="/"
+            href="#hero"
           >
             KAALCYBERSEC
           </a>
@@ -466,28 +401,14 @@ export default function KaalCyberSecLanding() {
         className="hero-container"
       >
 
-        {/* BACKGROUND */}
-       
+        {/* 3D BACKGROUND */}
+        <CyberScene />
 
-        {/* OVERLAYS */}
-        <div className="matrix-overlay"></div>
+        {/* OVERLAY */}
+        <div className="hero-overlay"></div>
 
-<div className="hero-grid"></div>
-
-<div className="scan-lines"></div>
-
-        {/* FLOATING CODE */}
-        <div className="floating-code code-1">
-          initializing secure shell...
-        </div>
-
-        <div className="floating-code code-2">
-          bypassing firewalls...
-        </div>
-
-        <div className="floating-code code-3">
-          establishing encrypted protocols...
-        </div>
+        {/* SCAN LINES */}
+        <div className="scan-lines"></div>
 
         {/* CONTENT */}
         <div
