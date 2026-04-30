@@ -1,3 +1,14 @@
 User-agent: *
+
 Allow: /
+
+# Important folders
+Allow: /assets/
+Allow: /static/
+
+# Block unnecessary system files
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Sitemap
 Sitemap: https://kaal-1-commit.github.io/KaalCyberSec/sitemap.xml
