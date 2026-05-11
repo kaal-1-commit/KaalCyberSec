@@ -1,6 +1,10 @@
 import './App.css';
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // Components
@@ -65,7 +69,7 @@ const App = () => {
   return (
     <div className="App">
       <HelmetProvider>
-      <Router basename='/KaalCyberSec'>
+      <Router >
         <ScrollToTop /> 
         {/* CYBER BACKGROUND */}
         <div className="cyber-grid"></div>
