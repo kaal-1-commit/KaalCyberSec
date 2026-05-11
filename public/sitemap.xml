@@ -1,97 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
+  <!-- MAIN PAGES -->
+
   <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/services</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/case-studies</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/blog</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/career</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/verify</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://kaal-1-commit.github.io/KaalCyberSec/#/</loc>
   </url>
 
   <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/blog/evolution-of-cyber-warfare</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://kaal-1-commit.github.io/KaalCyberSec/#/about</loc>
   </url>
 
   <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/blog/modern-penetration-testing-enterprise-protection</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://kaal-1-commit.github.io/KaalCyberSec/#/services</loc>
   </url>
+
   <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/blog/real-world-red-team-operations</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://kaal-1-commit.github.io/KaalCyberSec/#/career</loc>
   </url>
+
   <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/blog/cloud-infrastructure-hardening-best-practices</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://kaal-1-commit.github.io/KaalCyberSec/#/blog</loc>
   </url>
+
   <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/blog/common-vulnerabilities-web-application-audits</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://kaal-1-commit.github.io/KaalCyberSec/#/contact</loc>
   </url>
+
   <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/blog/secure-coding-practices-modern-applications</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://kaal-1-commit.github.io/KaalCyberSec/#/verify</loc>
   </url>
+
+  <!-- BLOG POSTS -->
+
   <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/blog/ai-cybersecurity-future-threat-detection</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>
+      https://kaal-1-commit.github.io/KaalCyberSec/#/blog/evolution-of-cyber-warfare
+    </loc>
   </url>
+
   <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/blog/security-operation-centers-real-time-threat-detection</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>
+      https://kaal-1-commit.github.io/KaalCyberSec/#/blog/modern-penetration-testing-enterprise-protection
+    </loc>
   </url>
+
   <url>
-    <loc>https://kaal-1-commit.github.io/KaalCyberSec/blog/integrating-security-cicd-pipelines</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>
+      https://kaal-1-commit.github.io/KaalCyberSec/#/blog/real-world-red-team-operations
+    </loc>
+  </url>
+
+  <url>
+    <loc>
+      https://kaal-1-commit.github.io/KaalCyberSec/#/blog/cloud-infrastructure-hardening-best-practices
+    </loc>
+  </url>
+
+  <url>
+    <loc>
+      https://kaal-1-commit.github.io/KaalCyberSec/#/blog/common-vulnerabilities-web-application-audits
+    </loc>
+  </url>
+
+  <url>
+    <loc>
+      https://kaal-1-commit.github.io/KaalCyberSec/#/blog/secure-coding-practices-modern-applications
+    </loc>
+  </url>
+
+  <url>
+    <loc>
+      https://kaal-1-commit.github.io/KaalCyberSec/#/blog/ai-cybersecurity-future-threat-detection
+    </loc>
+  </url>
+
+  <url>
+    <loc>
+      https://kaal-1-commit.github.io/KaalCyberSec/#/blog/security-operation-centers-real-time-threat-detection
+    </loc>
+  </url>
+
+  <url>
+    <loc>
+      https://kaal-1-commit.github.io/KaalCyberSec/#/blog/integrating-security-cicd-pipelines
+    </loc>
   </url>
 
 </urlset>
