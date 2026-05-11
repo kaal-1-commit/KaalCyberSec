@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/KaalCyberSec/static/css/main.afe5148b.css",
-    "main.js": "/KaalCyberSec/static/js/main.896cbf5e.js",
+    "main.css": "/KaalCyberSec/static/css/main.8f48a655.css",
+    "main.js": "/KaalCyberSec/static/js/main.02701243.js",
     "static/js/453.456e7b2d.chunk.js": "/KaalCyberSec/static/js/453.456e7b2d.chunk.js",
+    "static/media/seal.png": "/KaalCyberSec/static/media/seal.25ef564c1201d4b41d68.png",
     "index.html": "/KaalCyberSec/index.html",
-    "main.afe5148b.css.map": "/KaalCyberSec/static/css/main.afe5148b.css.map",
-    "main.896cbf5e.js.map": "/KaalCyberSec/static/js/main.896cbf5e.js.map",
+    "main.8f48a655.css.map": "/KaalCyberSec/static/css/main.8f48a655.css.map",
+    "main.02701243.js.map": "/KaalCyberSec/static/js/main.02701243.js.map",
     "453.456e7b2d.chunk.js.map": "/KaalCyberSec/static/js/453.456e7b2d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.afe5148b.css",
-    "static/js/main.896cbf5e.js"
+    "static/css/main.8f48a655.css",
+    "static/js/main.02701243.js"
   ]
 }
