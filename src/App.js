@@ -65,7 +65,7 @@ const App = () => {
   return (
     <div className="App">
       <HelmetProvider>
-      <Router>
+      <Router basename='KaalCyberSec'>
         <ScrollToTop /> 
         {/* CYBER BACKGROUND */}
         <div className="cyber-grid"></div>
@@ -83,15 +83,15 @@ const App = () => {
         <Routes>
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} /> 
-          <Route path="/KaalCyberSec" element={<Home />} />
-          <Route path="/KaalCyberSec/about" element={<About />} />
-          <Route path="/KaalCyberSec/services" element={<Service />} />
-          <Route path="/KaalCyberSec/career" element={<Career />} />
-          <Route path="/KaalCyberSec/blog" element={<Blog />} />
-          <Route path="/KaalCyberSec/contact" element={<Contact />} />
-          <Route path="/KaalCyberSec/generate" element={<Generate />} />
-          <Route path="/KaalCyberSec/verify" element={<Verify />} />
-          <Route path="/KaalCyberSec/case-studies" element={<ClientSuccess />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Service />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/generate" element={<Generate />} />
+          <Route path="/verify" element={<Verify />} />
+          <Route path="/case-studies" element={<ClientSuccess />} />
         
         </Routes>
 

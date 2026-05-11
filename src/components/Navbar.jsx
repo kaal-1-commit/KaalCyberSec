@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className="cyber-container">
         
         {/* --- SEO PROTECTED BRAND LOGO --- */}
-        <Link className="cyber-brand" to="/KaalCyberSec" onClick={() => setMenuOpen(false)}>
+        <Link className="cyber-brand" to="/" onClick={() => setMenuOpen(false)}>
           <TerminalSquare size={24} className="me-2 inline text-green" />
           
           {/* Invisible to users, visible to Google */}
@@ -73,37 +73,37 @@ export default function Navbar() {
         <div className={`cyber-nav-menu ${menuOpen ? "open" : ""}`}>
           <ul className="cyber-nav-list">
             <li>
-              <Link className="cyber-link" to="KaalCyberSec/about" onClick={() => setMenuOpen(false)}>
+              <Link className="cyber-link" to="/about" onClick={() => setMenuOpen(false)}>
                 About
               </Link>
             </li>
             <li>
-              <Link className="cyber-link" to="KaalCyberSec/services" onClick={() => setMenuOpen(false)}>
+              <Link className="cyber-link" to="/services" onClick={() => setMenuOpen(false)}>
                 Services
               </Link>
             </li>
             <li>
-              <Link className="cyber-link" to="KaalCyberSec/verify" onClick={() => setMenuOpen(false)}>
+              <Link className="cyber-link" to="/verify" onClick={() => setMenuOpen(false)}>
                 Verify
               </Link>
             </li>
             <li>
-              <Link className="cyber-link" to="KaalCyberSec/blog" onClick={() => setMenuOpen(false)}>
+              <Link className="cyber-link" to="/blog" onClick={() => setMenuOpen(false)}>
                 Research
               </Link>
             </li>
             <li>
-              <Link className="cyber-link" to="KaalCyberSec/case-studies" onClick={() => setMenuOpen(false)}>
+              <Link className="cyber-link" to="/case-studies" onClick={() => setMenuOpen(false)}>
                 Client Success
               </Link>
             </li>
             <li>
-              <Link className="cyber-link" to="KaalCyberSec/career" onClick={() => setMenuOpen(false)}>
+              <Link className="cyber-link" to="/career" onClick={() => setMenuOpen(false)}>
                 Join Us
               </Link>
             </li>
             <li>
-              <Link className="cyber-link highlight-link" to="KaalCyberSec/contact" onClick={() => setMenuOpen(false)}>
+              <Link className="cyber-link highlight-link" to="/contact" onClick={() => setMenuOpen(false)}>
                 Engage
               </Link>
             </li>
