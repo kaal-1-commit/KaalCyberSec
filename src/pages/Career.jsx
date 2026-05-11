@@ -347,19 +347,23 @@ export default class Career extends Component {
         {/* STYLES */}
         <style>{`
 
+         body { background: #000; color: #fff; overflow-x: hidden; }
+
           @import url('https://fonts.cdnfonts.com/css/camomile');
 
           .career-heading {
 
-            font-size: 3rem;
+             font-size: 3rem;
 
-            font-weight: 700;
+          font-weight: 800;
 
-            letter-spacing: 2px;
+          text-align: center;
 
-            color: #fff;
+          color: #00ff88;
 
-            text-shadow: 0 0 18px rgba(0,255,120,0.18);
+          text-shadow:
+            0 0 15px rgba(0,255,120,0.45),
+            0 0 40px rgba(0,255,120,0.15);
           }
 
           .career-subtext {
@@ -648,7 +652,13 @@ export default class Career extends Component {
         `}</style>
 
         {/* HEADING */}
-        <div className="text-center mb-5">
+           <div className="service-glow"></div>
+          {/* CURSOR GLOW */}
+        <div className="mouse-light"></div>
+
+        {/* AMBIENT TOP GLOW */}
+        <div className="top-glow"></div>
+        <div className="text-center mb-5 mt-5 position-relative">
 
           <h2
             className="career-heading"

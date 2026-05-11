@@ -12,7 +12,7 @@ body {
   position: relative;
   min-height: 100vh;
   
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 /* CYBER GRID */
@@ -33,7 +33,7 @@ body {
 
   z-index: -3;
 
-  animation: moveGrid 10s linear infinite;
+  animation: moveGrid 5s linear infinite;
 
   opacity: 1;
 }

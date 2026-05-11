@@ -1,44 +1,51 @@
 import './App.css';
-
 import { useEffect, useState } from "react";
-
-import Loader from './components/Loader';
-
-import Landingpage from './components/Landingpage';
-import Contact from './components/Contact';
-import Service from './components/Service';
-import About from './components/About';
-import Testimonials from './components/Testimonial';
-import TechStack from './components/Technology';
-import CaseStudies from './components/Case';
-import Caareer from './components/Career';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+// Components
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Bundles from "./components/Bundles";
-import Blog from './components/Blog';
-const App = () => {
+import ScrollToTop from './components/ScrollToTop';
+import { HelmetProvider } from 'react-helmet-async'
+// Pages
+import Loader from './pages/Loader';
+import Home from './pages/Home';
+import About from './pages/About';
+import Service from './pages/Service';
+import Career from './pages/Career';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+import Generate from './pages/generate';
+import Verify from './pages/Verify';
+import ClientSuccess from "./pages/ClientSuccess";
+import BlogPost from './pages/BlogPost';
 
+const App = () => {
+  /* INITIALIZE AOS GLOBALLY */
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   const [loading, setLoading] = useState(true);
 
   /* LOADER */
   useEffect(() => {
-
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
-
   }, []);
 
   /* MOUSE LIGHT */
   useEffect(() => {
-
     const light = document.querySelector(".mouse-light");
 
     const moveLight = (e) => {
-
       if (!light) return;
-
       light.style.left = `${e.clientX}px`;
       light.style.top = `${e.clientY}px`;
     };
@@ -48,7 +55,6 @@ const App = () => {
     return () => {
       window.removeEventListener("mousemove", moveLight);
     };
-
   }, []);
 
   /* SHOW LOADER FIRST */
@@ -57,40 +63,42 @@ const App = () => {
   }
 
   return (
-
     <div className="App">
+      <HelmetProvider>
+      <Router>
+        <ScrollToTop /> 
+        {/* CYBER BACKGROUND */}
+        <div className="cyber-grid"></div>
 
-      {/* CYBER BACKGROUND */}
-      <div className="cyber-grid"></div>
+        {/* CURSOR GLOW */}
+        <div className="mouse-light"></div>
 
-      {/* CURSOR GLOW */}
-      <div className="mouse-light"></div>
+        {/* AMBIENT TOP GLOW */}
+        <div className="top-glow"></div>
 
-      {/* AMBIENT TOP GLOW */}
-      <div className="top-glow"></div>
+        {/* GLOBAL COMPONENTS */}
+        <Navbar />
 
-      {/* WEBSITE */}
+        {/* PAGE ROUTES */}
+        <Routes>
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} /> 
+          <Route path="/KaalCyberSec" element={<Home />} />
+          <Route path="/KaalCyberSec/about" element={<About />} />
+          <Route path="/KaalCyberSec/services" element={<Service />} />
+          <Route path="/KaalCyberSec/career" element={<Career />} />
+          <Route path="/KaalCyberSec/blog" element={<Blog />} />
+          <Route path="/KaalCyberSec/contact" element={<Contact />} />
+          <Route path="/KaalCyberSec/generate" element={<Generate />} />
+          <Route path="/KaalCyberSec/verify" element={<Verify />} />
+          <Route path="/KaalCyberSec/case-studies" element={<ClientSuccess />} />
+        
+        </Routes>
 
-      <Landingpage />
-
-      <Service />
-
-      <Bundles />
-     
-      <About />
-
-      <TechStack />
-
-      <Testimonials />
-
-      <CaseStudies />
-
-        <Caareer />
-      <Blog />
-      <Contact />
-
-      <Footer />
-     
+        {/* GLOBAL COMPONENTS */}
+        <Footer />
+      </Router>
+      </HelmetProvider>
     </div>
   );
 }
