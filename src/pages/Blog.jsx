@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   ShieldCheck,
   Terminal,
@@ -356,10 +357,10 @@ export default function Blog() {
               in the modern threat landscape.
             </p>
 
-            <a href="/blog/evolution-of-cyber-warfare" className="featured-btn">
+            <Link to="/blog/evolution-of-cyber-warfare" className="featured-btn">
               Explore Research
               <ArrowRight size={18} />
-            </a>
+            </Link>
           </article>
 
           {/* BLOG GRID (Converted divs to Semantic Articles & crawlable links) */}
@@ -392,13 +393,13 @@ export default function Blog() {
                     {blog.read}
                   </span>
                   {/* Changed div to a crawlable anchor tag */}
-                  <a 
-                    href={`/blog/${blog.slug}`} 
+                  <Link 
+                    to={`/blog/${blog.slug}`} 
                     className="read-btn"
                     aria-label={`Read article: ${blog.title}`}
                   >
                     <ArrowRight size={18} />
-                  </a>
+                  </Link>
                 </footer>
               </article>
             ))}
