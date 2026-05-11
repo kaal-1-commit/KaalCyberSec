@@ -65,7 +65,7 @@ const App = () => {
   return (
     <div className="App">
       <HelmetProvider>
-      <Router basename='KaalCyberSec'>
+      <Router basename='/KaalCyberSec'>
         <ScrollToTop /> 
         {/* CYBER BACKGROUND */}
         <div className="cyber-grid"></div>
