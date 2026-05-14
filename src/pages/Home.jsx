@@ -461,11 +461,11 @@ export default function KaalCyberSecLanding() {
           </p>
 
           <div className="hero-buttons">
-            <a href="KaalCyberSec/services" className="neon-btn">
+            <a href="https://kaal-1-commit.github.io/KaalCyberSec/index.html#/services" className="neon-btn">
               Explore Services
               <ChevronRight size={18} />
             </a>
-            <a href="KaalCyberSec/contact" className="neon-btn">
+            <a href="https://kaal-1-commit.github.io/KaalCyberSec/index.html#/contact" className="neon-btn">
               Get In Touch
               <ChevronRight size={18} />
             </a>
