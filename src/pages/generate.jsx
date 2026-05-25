@@ -511,6 +511,8 @@ export default function CertificateGenerator() {
                     <option value="Digital Forensics">Digital Forensics</option>
                     <option value="Cloud Security">Cloud Security</option>
                     <option value="Data Entry">Data Entry</option>
+                    <option value="SOC Analysis">SOC Analysis</option>
+                    <option value="Full Stack Development">Full Stack Development</option>
                     <option value="Human Resource">Human Resource</option>
                     <option value="Frontend Development">Frontend Development</option>
                     <option value="Backend Development">Backend Development</option>

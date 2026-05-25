@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FAQ from "../components/FAQ"; // Adjust path if needed
+
 import {
   ShieldCheck,
   Code2,
@@ -15,72 +15,7 @@ import {
 export default class Service extends Component {
   render() {
     // 8 Premium Services for a perfectly balanced 4x2 grid on large screens
-  const enterpriseFAQs = [
-    {
-      question: "Who is the founder of KaalCyberSec?",
-      answer: "KaalCyberSec was founded by Prince Chaudhary, a recognized perfectionist across offensive hacking, advanced computer hardware, and full-stack engineering. His unique, multidisciplinary expertise ensures that our solutions aren't just theoretically secure, but practically impenetrable at both the software and hardware levels."
-    },
-    {
-      question: "How long does a typical enterprise penetration test take?",
-      answer: "The duration of a penetration test depends heavily on the scope and complexity of your digital infrastructure. A standard web application or API pentest typically takes 1 to 2 weeks, while large-scale enterprise network or red team operations can take 3 to 6 weeks."
-    },
-    {
-      question: "What makes KaalCyberSec different from automated scanning tools?",
-      answer: "Automated scanners only catch known, surface-level flaws. Our team utilizes a manual, offensive hacker mindset combined with engineering precision. We chain multiple low-risk vulnerabilities together to execute complex, real-world exploits that automated tools completely miss."
-    },
-    {
-      question: "Do you provide secure full-stack development services?",
-      answer: "Yes. Leveraging our founder's deep development expertise, we architect and deploy secure-by-design web applications. We specialize in building highly resilient, scalable platforms utilizing modern frameworks like React for the frontend and Python/Django for robust backend infrastructure."
-    },
-    {
-      question: "What is included in your final security assessment report?",
-      answer: "We deliver a comprehensive, enterprise-grade report divided into two sections: an Executive Summary for C-level stakeholders detailing business risks, and a Deep Technical Breakdown for developers. It includes step-by-step exploit replication, CVSS scoring, and actionable remediation code snippets."
-    },
-    {
-      question: "Do you provide remediation support after uncovering vulnerabilities?",
-      answer: "Absolutely. We don't just hand over a report and leave. KaalCyberSec provides developer-friendly remediation guidance and includes a complimentary re-test within 30 days to cryptographically verify that all critical vulnerabilities have been successfully patched."
-    },
-    {
-      question: "What is the difference between Red Teaming and standard Penetration Testing?",
-      answer: "A penetration test is a comprehensive assessment to find as many vulnerabilities as possible within a specific timeframe. Red Teaming is a targeted, covert adversary simulation designed to test your organization's detection, response capabilities (SOC), and human awareness without them knowing an attack is happening."
-    },
-    {
-      question: "Will your offensive security assessments disrupt our daily operations?",
-      answer: "No. Our security engineers strictly utilize controlled, non-destructive methodologies. While we simulate highly aggressive real-world attacks, we operate within explicitly defined boundaries and Rules of Engagement (RoE) to ensure zero downtime for your production environments."
-    },
-    {
-      question: "How do you handle data confidentiality and non-disclosure agreements (NDAs)?",
-      answer: "Confidentiality is our highest priority. We enforce strict, military-grade data protection protocols and operate on an NDA-first basis. All client data, vulnerability reports, and communication channels are end-to-end encrypted and completely isolated."
-    },
-    {
-      question: "Does KaalCyberSec perform hardware security audits and digital forensics?",
-      answer: "Yes. Given our deep background in computer hardware architecture, we conduct rigorous physical security assessments, hardware reverse-engineering, and post-breach digital forensics to recover data and trace attack vectors at the bare-metal level."
-    },
-    {
-      question: "What industries do you specialize in protecting?",
-      answer: "We provide high-assurance security services across multiple high-risk sectors, including Healthcare (HIPAA environments), FinTech, E-Commerce, Higher Education, and global Enterprise Technology infrastructures."
-    },
-    {
-      question: "How fast is your Incident Response (IR) deployment?",
-      answer: "In the event of an active breach, our incident response team initiates rapid containment protocols. We focus on immediate threat eradication, forensic preservation, and restoring business continuity with minimal operational loss."
-    },
-    {
-      question: "Can you audit custom APIs and microservice architectures?",
-      answer: "Yes. We conduct rigorous security audits on custom RESTful and GraphQL APIs. We specifically target complex authentication bypasses, Broken Object Level Authorization (BOLA), rate limiting flaws, and injection vectors within microservices."
-    },
-    {
-      question: "Do you offer continuous vulnerability monitoring or just point-in-time tests?",
-      answer: "While we offer point-in-time penetration testing, we highly recommend our continuous vigilance programs. We deploy proactive threat hunting and real-time perimeter monitoring to catch newly exposed vulnerabilities before adversaries can exploit them."
-    },
-    {
-      question: "Can your assessments help us achieve compliance (SOC 2, ISO 27001, etc.)?",
-      answer: "Yes. Our penetration tests and architecture reviews are mapped directly to industry-standard frameworks like OWASP Top 10, NIST, and MITRE ATT&CK, fulfilling the stringent testing requirements needed for SOC 2, ISO 27001, and PCI-DSS compliance."
-    },
-    {
-      question: "Do you offer cybersecurity awareness training for internal staff?",
-      answer: "Human error remains the largest attack vector. We conduct targeted phishing simulations, social engineering campaigns, and comprehensive awareness training to transform your employees from a security liability into a proactive human firewall."
-    }
-  ];
+ 
     const services = [
       {
         icon: <ShieldCheck size={48} />,
@@ -362,10 +297,7 @@ export default class Service extends Component {
           </div>
 
         </div>
-        <FAQ 
-          title="Service Execution Queries" 
-          faqData={enterpriseFAQs} 
-        />
+     
       </section>
     );
   }
